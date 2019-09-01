@@ -1,0 +1,23 @@
+{
+  "name": "tranferwise",
+  "version": "1.0.0",
+  "description": "Transferwise home page clone",
+  "repository": "https://github.com/francisudeji/transferwise.git",
+  "author": "francisudeji <francis.udejiofficial@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "next",
+    "start": "next start",
+    "build": "next build",
+    "export": "npm run build && next export",
+    "build:css": "postcss css/tailwind.css -o static/styles.css --watch"
+  },
+  "dependencies": {
+    "autoprefixer": "^9.6.1",
+    "next": "^9.0.5",
+    "postcss-cli": "^6.1.3",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "tailwindcss": "^1.1.2"
+  }
+}
