@@ -1,13 +1,22 @@
 import Head from 'next/head'
+import Main from '../components/main'
+import '../css/styles.css'
+import Header from '../components/header'
+import BorderlessAccount from '../components/borderless-account'
+import SendingMoney from '../components/sending-money'
 
 function Index() {
   return (
     <>
       <Head>
-        <link rel='stylesheet' href='/static/styles.css' />
-        <title>TransferWise</title>
+        <title>
+          Transfer Money Online | Send Money Online With TransferWise
+        </title>
       </Head>
-      <h1 className='text-blue-500 text-center text-4xl'>Hello World!</h1>
+      <Header />
+      <Main />
+      <BorderlessAccount className='md:hidden' />
+      <SendingMoney />
     </>
   )
 }
