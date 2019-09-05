@@ -3,10 +3,14 @@ function BorderlessAccount({ className }) {
     <section className={className}>
       <div className='container mx-auto px-4 pb-16'>
         <div className=' lg:flex lg:items-center'>
-          <div className='w-88 mx-auto relative mt-12 lg:w-1/2 lg:order-2'>
-            <img className='w-2/3 ml-auto' src='/static/phone.jpg' alt='' />
+          <div className='w-88 max-w-xs mx-auto relative mt-12 lg:w-1/2 lg:order-2'>
             <img
-              className='w-48 ml-8 -mt-20 lg:w-2/3 lg:-mt-40 lg:ml-4'
+              className='w-2/3 ml-auto mr-4 lg:mr-0'
+              src='/static/phone.jpg'
+              alt=''
+            />
+            <img
+              className='w-48 ml-4 -mt-20 lg:w-2/3 lg:-mt-40 lg:ml-4'
               src='/static/mastercard.png'
               alt=''
             />

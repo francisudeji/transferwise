@@ -8,7 +8,7 @@ import {
 
 function Main() {
   return (
-    <main className='bg-lightest-blue pb-20'>
+    <main className='bg-lightest-blue pb-20 md:pb-32'>
       <div className='container mx-auto px-4'>
         <div className='h-pane pt-8 sm:pt-24 lg:flex justify-between'>
           <div className='left-pane lg:flex-1 lg:pr-10'>

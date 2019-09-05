@@ -4,6 +4,7 @@ import '../css/styles.css'
 import Header from '../components/header'
 import BorderlessAccount from '../components/borderless-account'
 import SendingMoney from '../components/sending-money'
+import HowToSendMoney from '../components/how-to-send-money'
 
 function Index() {
   return (
@@ -17,6 +18,7 @@ function Index() {
       <Main />
       <BorderlessAccount className='md:hidden' />
       <SendingMoney />
+      <HowToSendMoney />
     </>
   )
 }
