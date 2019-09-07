@@ -2,6 +2,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        'timestamp-blue': '#9ED3F7',
+        'one-time-blue': '#00A4DF',
         'off-blue': '#ECF8FF',
         'lightest-blue': '#37517e',
         'light-blue': '#00b9ff',
@@ -19,7 +21,13 @@ module.exports = {
         '72': '18rem',
         '80': '20rem',
         '88': '22rem',
-        '96': '24rem'
+        '96': '24rem',
+        '104': '26rem',
+        '112': '28rem',
+        '120': '30rem',
+        '128': '32rem',
+        '136': '34rem',
+        '144': '36rem'
       }
     },
     screens: {

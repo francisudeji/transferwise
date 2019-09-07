@@ -1,11 +1,11 @@
 function BorderlessAccount({ className }) {
   return (
     <section className={className}>
-      <div className='container mx-auto px-4 pb-16'>
+      <div className='container mx-auto px-4 py-16'>
         <div className=' lg:flex lg:items-center'>
-          <div className='w-88 max-w-xs mx-auto relative mt-12 lg:w-1/2 lg:order-2'>
+          <div className='w-88 max-w-lg mx-auto relative mt-12 lg:w-1/2 lg:order-2 lg:mt-0'>
             <img
-              className='w-2/3 ml-auto mr-4 lg:mr-0'
+              className='w-2/3 ml-auto mr-4 lg:mr-0 lg:w-3/4'
               src='/static/phone.jpg'
               alt=''
             />
@@ -17,7 +17,10 @@ function BorderlessAccount({ className }) {
           </div>
 
           <div className='lg:w-1/2 lg:order-1'>
-            <h2 className='text-3xl font-bold text-dark-blue text-center mt-6 md:text-5xl lg:text-left leading-tight'>
+            <span className='hidden lg:inline-block rounded-full bg-dark-green text-white text-sm px-3 py-1'>
+              New
+            </span>
+            <h2 className='text-3xl font-bold text-dark-blue text-center mt-6 leading-tight md:text-5xl lg:text-left lg:mt-3'>
               The TransferWise borderless account
               <span className='text-dark-green'>.</span>
             </h2>
@@ -53,7 +56,9 @@ function BorderlessAccount({ className }) {
                       <path d='M8.6 12.9l-5 2.6.9-5.6-4.1-4 5.7-.8L8.6 0l2.6 5.1 5.6.8-4.1 4 1 5.6zM28.6 12.9l-5 2.6.9-5.6-4.1-4 5.7-.8L28.6 0l2.6 5.1 5.6.8-4.1 4 1 5.6zM48.6 12.9l-5 2.6.9-5.6-4.1-4 5.7-.8L48.6 0l2.6 5.1 5.6.8-4.1 4 1 5.6zM68.6 12.9l-5 2.6.9-5.6-4.1-4 5.7-.8L68.6 0l2.6 5.1 5.6.8-4.1 4 1 5.6zM88.6 12.9l-5 2.6.9-5.6-4.1-4 5.7-.8L88.6 0l2.6 5.1 5.6.8-4.1 4 1 5.6z' />
                     </g>
                   </svg>
-                  <p className='text-gray-600 text-lg'>4.8, 34.3K Ratings</p>
+                  <p className='text-gray-600 mt-2 text-lg'>
+                    4.8, 34.3K Ratings
+                  </p>
                 </div>
               </div>
               <div className='sm:ml-2'>
@@ -73,7 +78,9 @@ function BorderlessAccount({ className }) {
                       <path d='M8.6 12.9l-5 2.6.9-5.6-4.1-4 5.7-.8L8.6 0l2.6 5.1 5.6.8-4.1 4 1 5.6zM28.6 12.9l-5 2.6.9-5.6-4.1-4 5.7-.8L28.6 0l2.6 5.1 5.6.8-4.1 4 1 5.6zM48.6 12.9l-5 2.6.9-5.6-4.1-4 5.7-.8L48.6 0l2.6 5.1 5.6.8-4.1 4 1 5.6zM68.6 12.9l-5 2.6.9-5.6-4.1-4 5.7-.8L68.6 0l2.6 5.1 5.6.8-4.1 4 1 5.6zM88.6 12.9l-5 2.6.9-5.6-4.1-4 5.7-.8L88.6 0l2.6 5.1 5.6.8-4.1 4 1 5.6z' />
                     </g>
                   </svg>
-                  <p className='text-gray-600 text-lg'>4.5, 58.8K Ratings</p>
+                  <p className='text-gray-600 mt-2 text-lg'>
+                    4.5, 58.8K Ratings
+                  </p>
                 </div>
               </div>
             </div>

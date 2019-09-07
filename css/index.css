@@ -1,0 +1,29 @@
+html,
+body {
+  height: 100%;
+}
+@font-face {
+  font-family: 'Averta Bold';
+  src: url('/static/fonts/TW-Averta-Bold.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Averta Semibold';
+  src: url('/static/fonts/TW-Averta-Semibold.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Averta Regular';
+  src: url('/static/fonts/TW-Averta-Regular.woff2') format('woff2');
+}
+body {
+  font-family: 'Averta Regular', Helvetica, Arial, sans-serif;
+}
+h1,
+h2,
+h3 {
+  font-family: 'Averta Bold';
+}
+
+p,
+span {
+  font-family: 'Averta Regular';
+}

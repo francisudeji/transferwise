@@ -30,7 +30,7 @@ function Main() {
             </div>
 
             <div className='hidden md:block mt-10'>
-              <button className='flex items-center px-6 py-2 bg-transparent border border-light-blue mx-auto lg:mr-auto lg:ml-0'>
+              <button className='flex items-center px-6 py-2 bg-transparent border border-light-blue mx-auto hover:bg-light-blue hover:text-white lg:mr-auto lg:ml-0'>
                 <span className='h-8 w-8 flex items-center justify-center text-center rounded-full bg-light-blue'>
                   <FaPlay className='text-dark-blue text-xs' />
                 </span>
@@ -54,7 +54,6 @@ function Main() {
                       className='bg-white w-full text-dark-blue font-semibold outline-none text-2xl px-3 pt-1 pb-2'
                       value='1,000'
                     />
-                    <FaLock className='text-gray-400 text-xl z-10 absolute right-0 top-0 mr-4' />
                   </div>
                 </div>
                 <button className='text-white w-32 text-xl bg-dark-blue font-semibold px-3 flex justify-center items-center'>
@@ -74,13 +73,60 @@ function Main() {
                     <span className='text-white font-semibold text-sm ml-3'>
                       5.73 GBP
                     </span>
-                    <button className='rounded text-white text-base bg-dark-blue flex items-center justify-between px-4 py-2 ml-3'>
+                    <button className='rounded text-white text-base bg-dark-blue flex items-center justify-between px-4 py-2 ml-3 relative'>
                       <span>Low cost transfer</span>{' '}
                       <FaChevronDown className='text-light-blue ml-3' />
+                      <div className='hidden absolute z-30 left-0 top-0 py-4 px-2 rounded bg-white w-112'>
+                        <div>
+                          <a href='#' className='bg-dark-blue block py-2 px-2'>
+                            <div>
+                              <span className='block text-white text-base'>
+                                Low cost transfer{' '}
+                                <span className='text-gray-200 font-100'>
+                                  5.73GBP fee
+                                </span>
+                              </span>
+                              <span className='block text-gray-200 font-100'>
+                                Send money from your bank account
+                              </span>
+                            </div>
+                          </a>
+                        </div>
+                        <div>
+                          <a href='#' className='bg-dark-blue block py-4 px-3'>
+                            <div>
+                              <span className='block text-white text-base'>
+                                Low cost transfer{' '}
+                                <span className='text-gray-200 font-100'>
+                                  5.73GBP fee
+                                </span>
+                              </span>
+                              <span className='block text-gray-200 font-100'>
+                                Send money from your bank account
+                              </span>
+                            </div>
+                          </a>
+                        </div>
+                        <div>
+                          <a href='#' className='bg-dark-blue block py-4 px-3'>
+                            <div>
+                              <span className='block text-white text-base'>
+                                Low cost transfer{' '}
+                                <span className='text-gray-200 font-100'>
+                                  5.73GBP fee
+                                </span>
+                              </span>
+                              <span className='block text-gray-200 font-100'>
+                                Send money from your bank account
+                              </span>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
                     </button>
                     <span className='text-sm text-gray-300 ml-3'>fee</span>
                   </li>
-                  <li className='flex items-center mt-3'>
+                  <li className='flex items-center mt-3 relative'>
                     <span className='h-2 w-2 rounded-full bg-dark-blue ml-2'></span>
                     <span className='text-white text-sm font-semibold ml-5'>
                       994.27 GBP
@@ -109,7 +155,7 @@ function Main() {
                 </ul>
               </div>
 
-              <div className='flex rounded overflow-hidden mt-4'>
+              <div className='flex rounded overflow-hidden mt-4 relative'>
                 <div className='flex flex-col flex-1'>
                   <span className='block bg-white text-base text-dark-blue pt-2 pl-3'>
                     Recipient gets
