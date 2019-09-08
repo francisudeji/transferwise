@@ -52,7 +52,7 @@ function BorderlessAccount({ className }) {
                         <rect width='96%' height='16' />
                       </clipPath>
                     </defs>
-                    <g clip-path='url(#a)' fill='#ffb600' fillRule='evenodd'>
+                    <g clipPath='url(#a)' fill='#ffb600' fillRule='evenodd'>
                       <path d='M8.6 12.9l-5 2.6.9-5.6-4.1-4 5.7-.8L8.6 0l2.6 5.1 5.6.8-4.1 4 1 5.6zM28.6 12.9l-5 2.6.9-5.6-4.1-4 5.7-.8L28.6 0l2.6 5.1 5.6.8-4.1 4 1 5.6zM48.6 12.9l-5 2.6.9-5.6-4.1-4 5.7-.8L48.6 0l2.6 5.1 5.6.8-4.1 4 1 5.6zM68.6 12.9l-5 2.6.9-5.6-4.1-4 5.7-.8L68.6 0l2.6 5.1 5.6.8-4.1 4 1 5.6zM88.6 12.9l-5 2.6.9-5.6-4.1-4 5.7-.8L88.6 0l2.6 5.1 5.6.8-4.1 4 1 5.6z' />
                     </g>
                   </svg>
@@ -74,7 +74,7 @@ function BorderlessAccount({ className }) {
                         <rect width='90%' height='16' />
                       </clipPath>
                     </defs>
-                    <g clip-path='url(#a)' fill='#ffb600' fillRule='evenodd'>
+                    <g clipPath='url(#a)' fill='#ffb600' fillRule='evenodd'>
                       <path d='M8.6 12.9l-5 2.6.9-5.6-4.1-4 5.7-.8L8.6 0l2.6 5.1 5.6.8-4.1 4 1 5.6zM28.6 12.9l-5 2.6.9-5.6-4.1-4 5.7-.8L28.6 0l2.6 5.1 5.6.8-4.1 4 1 5.6zM48.6 12.9l-5 2.6.9-5.6-4.1-4 5.7-.8L48.6 0l2.6 5.1 5.6.8-4.1 4 1 5.6zM68.6 12.9l-5 2.6.9-5.6-4.1-4 5.7-.8L68.6 0l2.6 5.1 5.6.8-4.1 4 1 5.6zM88.6 12.9l-5 2.6.9-5.6-4.1-4 5.7-.8L88.6 0l2.6 5.1 5.6.8-4.1 4 1 5.6z' />
                     </g>
                   </svg>

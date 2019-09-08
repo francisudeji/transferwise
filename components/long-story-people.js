@@ -167,23 +167,23 @@ function LongStoryPeople() {
             </div>
           </div>
         </Slider>
-        <article class='mt-12'>
-          <div class='text-center'>
-            <h3 class='text-dark-blue px-6 font-bold text-xl md:text-3xl'>
+        <article className='mt-12'>
+          <div className='text-center'>
+            <h3 className='text-dark-blue px-6 font-bold text-xl md:text-3xl'>
               TrustPilot score 9.1 out of 10, from 71,470 reviews
-              <span class='text-blue-400'>.</span>
+              <span className='text-blue-400'>.</span>
             </h3>
-            <p class='text-dark-blue text-base mt-4 md:text-lg'>
+            <p className='text-dark-blue text-base mt-4 md:text-lg'>
               It’s your money. You can trust us to get it where it needs to be,
               but don’t take our word for it. Read our reviews at
               <span className='text-light-blue'>Trustpilot.com.</span>
             </p>
           </div>
 
-          <div class='row flex flex-col md:flex-row flex-wrap justify-between mt-16'>
-            <a class='mb-10 md:mb-0 w-full md:w-31%'>
+          <div className='row flex flex-col md:flex-row flex-wrap justify-between mt-16'>
+            <a className='mb-10 md:mb-0 w-full md:w-31%'>
               <svg
-                class='mx-auto mb-6 tw-testimonial__rating'
+                className='mx-auto mb-6 tw-testimonial__rating'
                 width='96'
                 height='16'
               >
@@ -192,52 +192,52 @@ function LongStoryPeople() {
                     <rect x='0' y='0' width='100%' height='16'></rect>
                   </clipPath>
                 </defs>
-                <g clip-path='url(#horizClip100-5d672975f0186906181cb296)'>
+                <g clipPath='url(#horizClip100-5d672975f0186906181cb296)'>
                   <path
                     transform='translate(0, 0)'
                     fill='#ffb600'
-                    fill-rule='evenodd'
+                    fillRule='evenodd'
                     d='M8.6 12.9l-5 2.6.9-5.6-4.1-4 5.7-.8L8.6 0l2.6 5.1 5.6.8-4.1 4 1 5.6z'
                   ></path>
                   <path
                     transform='translate(20, 0)'
                     fill='#ffb600'
-                    fill-rule='evenodd'
+                    fillRule='evenodd'
                     d='M8.6 12.9l-5 2.6.9-5.6-4.1-4 5.7-.8L8.6 0l2.6 5.1 5.6.8-4.1 4 1 5.6z'
                   ></path>
                   <path
                     transform='translate(40, 0)'
                     fill='#ffb600'
-                    fill-rule='evenodd'
+                    fillRule='evenodd'
                     d='M8.6 12.9l-5 2.6.9-5.6-4.1-4 5.7-.8L8.6 0l2.6 5.1 5.6.8-4.1 4 1 5.6z'
                   ></path>
                   <path
                     transform='translate(60, 0)'
                     fill='#ffb600'
-                    fill-rule='evenodd'
+                    fillRule='evenodd'
                     d='M8.6 12.9l-5 2.6.9-5.6-4.1-4 5.7-.8L8.6 0l2.6 5.1 5.6.8-4.1 4 1 5.6z'
                   ></path>
                   <path
                     transform='translate(80, 0)'
                     fill='#ffb600'
-                    fill-rule='evenodd'
+                    fillRule='evenodd'
                     d='M8.6 12.9l-5 2.6.9-5.6-4.1-4 5.7-.8L8.6 0l2.6 5.1 5.6.8-4.1 4 1 5.6z'
                   ></path>
                 </g>
               </svg>
-              <h3 class='text-dark-blue px-6 text-base md:text-lg font-bold text-center md:px-0'>
+              <h3 className='text-dark-blue px-6 text-base md:text-lg font-bold text-center md:px-0'>
                 Love the transparency, low fees, speed and ease of use.
               </h3>
-              <p class='text-dark-blue text-sm font-bold text-center mt-4'>
+              <p className='text-dark-blue text-sm font-bold text-center mt-4'>
                 AWick
               </p>
-              <small class='text-timestamp-blue block font-semibold text-sm text-center'>
+              <small className='text-timestamp-blue block font-semibold text-sm text-center'>
                 Published 4 hours ago
               </small>
             </a>
-            <a class='mb-10 md:mb-0 w-full md:w-31%'>
+            <a className='mb-10 md:mb-0 w-full md:w-31%'>
               <svg
-                class='mx-auto mb-6 tw-testimonial__rating'
+                className='mx-auto mb-6 tw-testimonial__rating'
                 width='96'
                 height='16'
               >
@@ -246,53 +246,53 @@ function LongStoryPeople() {
                     <rect x='0' y='0' width='100%' height='16'></rect>
                   </clipPath>
                 </defs>
-                <g clip-path='url(#horizClip100-5d672975f0186906181cb296)'>
+                <g clipPath='url(#horizClip100-5d672975f0186906181cb296)'>
                   <path
                     transform='translate(0, 0)'
                     fill='#ffb600'
-                    fill-rule='evenodd'
+                    fillRule='evenodd'
                     d='M8.6 12.9l-5 2.6.9-5.6-4.1-4 5.7-.8L8.6 0l2.6 5.1 5.6.8-4.1 4 1 5.6z'
                   ></path>
                   <path
                     transform='translate(20, 0)'
                     fill='#ffb600'
-                    fill-rule='evenodd'
+                    fillRule='evenodd'
                     d='M8.6 12.9l-5 2.6.9-5.6-4.1-4 5.7-.8L8.6 0l2.6 5.1 5.6.8-4.1 4 1 5.6z'
                   ></path>
                   <path
                     transform='translate(40, 0)'
                     fill='#ffb600'
-                    fill-rule='evenodd'
+                    fillRule='evenodd'
                     d='M8.6 12.9l-5 2.6.9-5.6-4.1-4 5.7-.8L8.6 0l2.6 5.1 5.6.8-4.1 4 1 5.6z'
                   ></path>
                   <path
                     transform='translate(60, 0)'
                     fill='#ffb600'
-                    fill-rule='evenodd'
+                    fillRule='evenodd'
                     d='M8.6 12.9l-5 2.6.9-5.6-4.1-4 5.7-.8L8.6 0l2.6 5.1 5.6.8-4.1 4 1 5.6z'
                   ></path>
                   <path
                     transform='translate(80, 0)'
                     fill='#ffb600'
-                    fill-rule='evenodd'
+                    fillRule='evenodd'
                     d='M8.6 12.9l-5 2.6.9-5.6-4.1-4 5.7-.8L8.6 0l2.6 5.1 5.6.8-4.1 4 1 5.6z'
                   ></path>
                 </g>
               </svg>
-              <h3 class='text-dark-blue px-6 text-base md:text-lg font-bold text-center md:px-0'>
+              <h3 className='text-dark-blue px-6 text-base md:text-lg font-bold text-center md:px-0'>
                 Very fast and efficient. Reasonable rates compared to other
                 platforms but yet offers the fastest transfer in…
               </h3>
-              <p class='text-dark-blue text-sm font-bold text-center mt-4'>
+              <p className='text-dark-blue text-sm font-bold text-center mt-4'>
                 YONG LOONG TAN
               </p>
-              <small class='text-timestamp-blue block font-semibold text-sm text-center'>
+              <small className='text-timestamp-blue block font-semibold text-sm text-center'>
                 Published 4 hours ago
               </small>
             </a>
-            <a class='mb-10 md:mb-0 w-full md:w-31%'>
+            <a className='mb-10 md:mb-0 w-full md:w-31%'>
               <svg
-                class='mx-auto mb-6 tw-testimonial__rating'
+                className='mx-auto mb-6 tw-testimonial__rating'
                 width='96'
                 height='16'
               >
@@ -301,47 +301,47 @@ function LongStoryPeople() {
                     <rect x='0' y='0' width='100%' height='16'></rect>
                   </clipPath>
                 </defs>
-                <g clip-path='url(#horizClip100-5d672975f0186906181cb296)'>
+                <g clipPath='url(#horizClip100-5d672975f0186906181cb296)'>
                   <path
                     transform='translate(0, 0)'
                     fill='#ffb600'
-                    fill-rule='evenodd'
+                    fillRule='evenodd'
                     d='M8.6 12.9l-5 2.6.9-5.6-4.1-4 5.7-.8L8.6 0l2.6 5.1 5.6.8-4.1 4 1 5.6z'
                   ></path>
                   <path
                     transform='translate(20, 0)'
                     fill='#ffb600'
-                    fill-rule='evenodd'
+                    fillRule='evenodd'
                     d='M8.6 12.9l-5 2.6.9-5.6-4.1-4 5.7-.8L8.6 0l2.6 5.1 5.6.8-4.1 4 1 5.6z'
                   ></path>
                   <path
                     transform='translate(40, 0)'
                     fill='#ffb600'
-                    fill-rule='evenodd'
+                    fillRule='evenodd'
                     d='M8.6 12.9l-5 2.6.9-5.6-4.1-4 5.7-.8L8.6 0l2.6 5.1 5.6.8-4.1 4 1 5.6z'
                   ></path>
                   <path
                     transform='translate(60, 0)'
                     fill='#ffb600'
-                    fill-rule='evenodd'
+                    fillRule='evenodd'
                     d='M8.6 12.9l-5 2.6.9-5.6-4.1-4 5.7-.8L8.6 0l2.6 5.1 5.6.8-4.1 4 1 5.6z'
                   ></path>
                   <path
                     transform='translate(80, 0)'
                     fill='#ffb600'
-                    fill-rule='evenodd'
+                    fillRule='evenodd'
                     d='M8.6 12.9l-5 2.6.9-5.6-4.1-4 5.7-.8L8.6 0l2.6 5.1 5.6.8-4.1 4 1 5.6z'
                   ></path>
                 </g>
               </svg>
-              <h3 class='text-dark-blue px-6 text-base md:text-lg font-bold text-center md:px-0'>
+              <h3 className='text-dark-blue px-6 text-base md:text-lg font-bold text-center md:px-0'>
                 Finally the 21st century comes to wire transfers!! No more
                 wasting time at bank branches!
               </h3>
-              <p class='text-dark-blue text-sm font-bold text-center mt-4'>
+              <p className='text-dark-blue text-sm font-bold text-center mt-4'>
                 AMJ
               </p>
-              <small class='text-timestamp-blue block font-semibold text-sm text-center'>
+              <small className='text-timestamp-blue block font-semibold text-sm text-center'>
                 Published 7 hours ago
               </small>
             </a>

@@ -26,7 +26,7 @@ function Header() {
             </button>
             <img
               src='/static/tw.svg'
-              className='didden md:inline-block h-6 lg:h-4 lg:-mt-3'
+              className='hidden md:inline-block h-6 lg:h-4 lg:-mt-3'
               alt=''
             />
             <span className='text-white md:hidden lg:inline-block'>

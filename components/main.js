@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react'
 import {
   FaChevronDown,
   FaLine,
@@ -5,8 +6,151 @@ import {
   FaChevronRight,
   FaPlay
 } from 'react-icons/fa'
+import axios from 'axios'
+import Dropdown from './dropdown'
 
 function Main() {
+  const [isFromOpen, setIsFromOpen] = useState(false)
+  const [isToOpen, setIsToOpen] = useState(false)
+  const [from] = useState('GBP')
+  const [to] = useState('NGN')
+  const [fromAmount, setFromAmount] = useState('1000')
+  const [toAmount, setToAmount] = useState(0)
+  const [exchangeRate, setExchangeRate] = useState(0)
+  const [fromInvalidMessage, setFromInvalidMessage] = useState(null)
+  const [toInvalidMessage, setToInvalidMessage] = useState(null)
+  const ENDPOINT = `https://free.currconv.com/api/v7/convert?q=${from}_${to}&compact=ultra&apiKey=2a610471886565c805c8`
+
+  useEffect(() => {
+    axios
+      .get(ENDPOINT)
+      .then(({ data }) => {
+        const rate = Number(data[`${from}_${to}`])
+        setExchangeRate(rate)
+        setToAmount(formatToMoney(parseFloat(fromAmount) * rate))
+      })
+      .catch(err => {
+        console.log({ err })
+      })
+  }, [from, to])
+
+  const formatToMoney = num =>
+    parseFloat(num)
+      .toFixed(2)
+      .replace(/\d(?=(\d{3})+\.)/g, '$&,')
+  const formatToNumber = num =>
+    String(num).replace(/[a-zA-Z-=!@`*\/ ,\t]+/g, '')
+
+  const currencies = [
+    {
+      name: 'Popular currencies'
+    },
+    {
+      name: 'Euro',
+      code: 'EUR'
+    },
+    {
+      name: 'British pound',
+      code: 'GBP'
+    },
+    {
+      name: 'Indian rupee',
+      code: 'INR'
+    },
+    {
+      name: 'United States dollar',
+      code: 'USD'
+    },
+    {
+      name: 'All currencies'
+    },
+    {
+      name: 'Argentine peso',
+      code: 'ARS'
+    },
+    {
+      name: 'Australian dollar',
+      code: 'AUD'
+    },
+    {
+      name: 'Bulgarian lev',
+      code: 'BGN'
+    },
+    {
+      name: 'Brazilian real',
+      code: 'BRL'
+    },
+    {
+      name: 'Canadian dollar',
+      code: 'CAD'
+    },
+    {
+      name: 'Swiss franc',
+      code: 'CHF'
+    },
+    {
+      name: 'Nigerian naira',
+      code: 'NGN'
+    },
+    {
+      name: 'Czech koruna',
+      code: 'CZK'
+    },
+    {
+      name: 'Danish krone',
+      code: 'DKK'
+    },
+    {
+      name: 'Hong Kong dollar',
+      code: 'HKD'
+    },
+    {
+      name: 'Croatian kuna',
+      code: 'HRK'
+    },
+    {
+      name: 'Hungarian forint',
+      code: 'HUF'
+    },
+
+    {
+      name: 'Japanese yen',
+      code: 'JPY'
+    },
+    {
+      name: 'Malaysian ringgit',
+      code: 'MYR'
+    },
+    {
+      name: 'Norwegian krone',
+      code: 'NOK'
+    },
+    {
+      name: 'New Zealand dollar',
+      code: 'NZD'
+    },
+    {
+      name: 'Polish złoty',
+      code: 'PLN'
+    },
+    {
+      name: 'Romanian leu',
+      code: 'RON'
+    },
+    {
+      name: 'Swedish krona',
+      code: 'SEK'
+    },
+    {
+      name: 'Singapore dollar',
+      code: 'SGD'
+    },
+    {
+      name: 'Turkish lira',
+      code: 'TRY'
+    }
+  ]
+
   return (
     <main className='bg-lightest-blue pb-20 md:pb-32'>
       <div className='container mx-auto px-4'>
@@ -42,24 +186,77 @@ function Main() {
           </div>
 
           <div className='right-pane lg:w-1/3'>
-            <form className='mt-4 md:mt-8 lg:mt-0'>
-              <div className='flex rounded overflow-hidden mt-4'>
-                <div className='flex flex-col flex-1'>
-                  <span className='block bg-white text-base text-dark-blue pt-2 pl-3'>
-                    You send
-                  </span>
-                  <div className='relative'>
-                    <input
-                      type='text'
-                      className='bg-white w-full text-dark-blue font-semibold outline-none text-2xl px-3 pt-1 pb-2'
-                      value='1,000'
+            <form className='mt-4 md:mt-8 lg:mt-0 relative'>
+              <div
+                className={`relative rounded mt-4 ${fromInvalidMessage !==
+                  null && 'border border-red-500'} `}
+              >
+                <div className='flex overflow-hidden relative'>
+                  <div className='flex flex-col flex-1'>
+                    <span className='block bg-white text-base text-dark-blue pt-2 pl-3'>
+                      You send
+                    </span>
+                    <div className='relative'>
+                      <input
+                        type='text'
+                        className='bg-white w-full text-dark-blue font-semibold outline-none text-2xl px-3 pt-1 pb-2'
+                        value={
+                          Object.is(NaN, fromAmount) === true ? '0' : fromAmount
+                        }
+                        onChange={e => {
+                          const num = formatToNumber(e.target.value)
+                          if (num <= 1) {
+                            setFromInvalidMessage(
+                              `The smallest amount you can send is 1.03 ${from}.`
+                            )
+                          }
+                          if (num > 1 && num <= 2) {
+                            setFromInvalidMessage(
+                              `Open a borderless account and add funds to instantly pay for your transfers.`
+                            )
+                          }
+                          if (num >= 2) {
+                            setFromInvalidMessage(null)
+                          }
+                          setFromAmount(num)
+                        }}
+                        onKeyUp={e => {
+                          setToAmount(
+                            formatToMoney(
+                              formatToNumber(String(fromAmount) * exchangeRate)
+                            )
+                          )
+                        }}
+                      />
+                    </div>
+                  </div>
+                  <button
+                    type='button'
+                    className='text-white w-32 text-xl bg-dark-blue font-semibold px-3 flex justify-center items-center'
+                    onClick={e => setIsFromOpen(true)}
+                  >
+                    <span>{from}</span>
+                    <FaChevronDown className='text-light-blue ml-3' />
+                  </button>
+                </div>
+                {fromInvalidMessage !== null && (
+                  <div className='relative text-red-600 w-full px-4 py-2  bg-red-100 font-normal'>
+                    {fromInvalidMessage}
+                  </div>
+                )}
+                {isFromOpen && (
+                  <div
+                    className='absolute bg-white h-120 w-3/4 p-3 overflow-y-scroll overflow-x-hidden rounded-sm right-0 top-0 z-30'
+                    onBlur={e => setIsFromOpen(false)}
+                  >
+                    <Dropdown
+                      items={currencies}
+                      initialHighlightedIndex={currencies.findIndex(
+                        c => c.code === from
+                      )}
                     />
                   </div>
-                </div>
-                <button className='text-white w-32 text-xl bg-dark-blue font-semibold px-3 flex justify-center items-center'>
-                  <span>GBP</span>
-                  <FaChevronDown className='text-light-blue ml-3' />
-                </button>
+                )}
               </div>
 
               <div className='flex rounded overflow-hidden mt-4'>
@@ -154,25 +351,77 @@ function Main() {
                   </li>
                 </ul>
               </div>
-
-              <div className='flex rounded overflow-hidden mt-4 relative'>
-                <div className='flex flex-col flex-1'>
-                  <span className='block bg-white text-base text-dark-blue pt-2 pl-3'>
-                    Recipient gets
-                  </span>
-                  <div className='relative'>
-                    <input
-                      type='text'
-                      className='bg-white w-full text-dark-blue font-semibold outline-none text-2xl px-3 pt-1 pb-2'
-                      value='425,853.80'
-                    />
-                    <FaLock className='text-gray-400 text-xl z-10 absolute right-0 top-0 mr-4' />
+              <div
+                className={`relative rounded mt-4 ${toInvalidMessage !== null &&
+                  'border border-red-500'} `}
+              >
+                <div className='flex rounded overflow-hidden mt-4 relative'>
+                  <div className='flex flex-col flex-1'>
+                    <span className='block bg-white text-base text-dark-blue pt-2 pl-3'>
+                      Recipient gets
+                    </span>
+                    <div className='relative'>
+                      <input
+                        type='text'
+                        className='bg-white w-full text-dark-blue font-semibold outline-none text-2xl px-3 pt-1 pb-2'
+                        value={
+                          Object.is(NaN, toAmount) === true ? '0' : toAmount
+                        }
+                        onChange={e => {
+                          const num = formatToNumber(e.target.value)
+                          if (num <= 1) {
+                            setToInvalidMessage(
+                              `The smallest amount you can send is 1.03 ${to}.`
+                            )
+                          }
+                          if (num > 1 && num <= 2) {
+                            setToInvalidMessage(
+                              `Open a borderless account and add funds to instantly pay for your transfers.`
+                            )
+                          }
+                          if (num >= 2) {
+                            setToInvalidMessage(null)
+                          }
+                          setToAmount(num)
+                        }}
+                        onKeyUp={e => {
+                          setFromAmount(
+                            formatToMoney(
+                              formatToNumber(String(toAmount) / exchangeRate)
+                            )
+                          )
+                        }}
+                      />
+                      <FaLock className='text-gray-400 text-xl z-10 absolute right-0 top-0 mr-4' />
+                    </div>
                   </div>
+                  <button
+                    type='button'
+                    className='text-white w-32 text-xl bg-dark-blue font-semibold px-3 flex justify-center items-center'
+                    onClick={e => setIsToOpen(true)}
+                  >
+                    <span>{to}</span>
+                    <FaChevronDown className='text-light-blue ml-3' />
+                  </button>
                 </div>
-                <button className='text-white w-32 text-xl bg-dark-blue font-semibold px-3 flex justify-center items-center'>
-                  <span>NGN</span>
-                  <FaChevronDown className='text-light-blue ml-3' />
-                </button>
+                {toInvalidMessage !== null && (
+                  <div className='relative text-red-600 w-full px-4 py-2  bg-red-100 font-normal'>
+                    {toInvalidMessage}
+                  </div>
+                )}
+                {isToOpen && (
+                  <div
+                    className='absolute bg-white h-120 w-3/4 p-3 overflow-y-scroll overflow-x-hidden rounded-sm right-0 top-0 z-30'
+                    onBlur={() => setIsToOpen(false)}
+                  >
+                    <Dropdown
+                      items={currencies}
+                      initialHighlightedIndex={currencies.findIndex(
+                        c => c.code === to
+                      )}
+                    />
+                  </div>
+                )}
               </div>
 
               <div className='flex items-center mt-8'>
