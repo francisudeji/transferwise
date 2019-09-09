@@ -25,7 +25,7 @@ function SendingMoney() {
                 />
                 <div>
                   <span className='text-white text-lg font-semibold block text-right md:text-xl md:font-bold'>
-                    425,853.80 NGN
+                    445,177.77 NGN
                   </span>
                   <span className='text-dark-green text-lg font-semibold block text-right'>
                     Save up to 2,751.47 NGN
@@ -61,7 +61,7 @@ function SendingMoney() {
                   <span className='text-dark-blue text-lg font-semibold block text-right md:text-xl md:font-bold'>
                     424,538.90 NGN
                   </span>
-                  <span className='text-dark-red text-lg font-semibold block text-right'>
+                  <span className='text-dark-red text-sm font-semibold block text-right'>
                     - 1,314.90 NGN
                   </span>
                 </div>
@@ -72,7 +72,7 @@ function SendingMoney() {
                   <span className='text-dark-blue text-lg font-semibold block text-right md:text-xl md:font-bold'>
                     423,102.33 NGN
                   </span>
-                  <span className='text-dark-red text-lg font-semibold block text-right'>
+                  <span className='text-dark-red text-sm font-semibold block text-right'>
                     - 2,751.47 NGN
                   </span>
                 </div>

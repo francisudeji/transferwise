@@ -2,40 +2,40 @@ function TrustedAllOverTheWorld() {
   return (
     <section className='bg-dark-blue'>
       <div className='container mx-auto px-4 py-12'>
-        <h2 className='text-white font-bold text-center text-3xl'>
+        <h2 className='text-white font-bold text-center text-3xl md:text-4xl'>
           Trusted all over the world<span className='text-light-blue'>.</span>
         </h2>
         <p className='text-base text-white text-center mt-2 px-8 md:text-lg'>
           We move over £4 billion every month, and save people and businesses £4
           million in hidden fees every day.
         </p>
-        <div className='offices mt-16'>
-          <div className='mb-3'>
-            <h2 className='text-white font-bold text-center text-3xl'>
+        <div className='offices mt-16 md:flex md:justify-between'>
+          <div className='mb-3 md:w-1/2 lg:w-23%'>
+            <h2 className='text-white font-bold text-center text-3xl md:text-4xl'>
               12 officies
             </h2>
             <p className='text-base text-white text-center mt-0 px-8 md:text-lg'>
               around the world
             </p>
           </div>
-          <div className='mb-3'>
-            <h2 className='text-white font-bold text-center text-3xl'>
+          <div className='mb-3 md:w-1/2 lg:w-23%'>
+            <h2 className='text-white font-bold text-center text-3xl md:text-4xl'>
               £4 billion
             </h2>
             <p className='text-base text-white text-center mt-0 px-8 md:text-lg'>
               sent every month
             </p>
           </div>
-          <div className='mb-3'>
-            <h2 className='text-white font-bold text-center text-3xl'>
+          <div className='mb-3 md:w-1/2 lg:w-23%'>
+            <h2 className='text-white font-bold text-center text-3xl md:text-4xl'>
               5 million
             </h2>
             <p className='text-base text-white text-center mt-0 px-8 md:text-lg'>
               customers
             </p>
           </div>
-          <div className='mb-3'>
-            <h2 className='text-white font-bold text-center text-3xl'>
+          <div className='mb-3 md:w-1/2 lg:w-23%'>
+            <h2 className='text-white font-bold text-center text-3xl md:text-4xl'>
               £1 billion
             </h2>
             <p className='text-base text-white text-center mt-0 px-8 md:text-lg'>

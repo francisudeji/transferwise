@@ -2,14 +2,10 @@ import React from 'react'
 import Downshift from 'downshift'
 import { FaSearch } from 'react-icons/fa'
 
-function Dropdown({ items, initialHighlightedIndex }) {
+function Dropdown({ items, onChange, initialHighlightedIndex }) {
   return (
     <Downshift
-      onChange={selection =>
-        alert(
-          selection ? `You selected ${selection.name}` : 'Selection Cleared'
-        )
-      }
+      onChange={onChange}
       itemToString={item => (item ? item.name : '')}
       isOpen={true}
       initialHighlightedIndex={initialHighlightedIndex}
@@ -35,7 +31,7 @@ function Dropdown({ items, initialHighlightedIndex }) {
               ? items
                   .filter(
                     item =>
-                      (item.code && !inputValue.toLowerCase()) ||
+                      !inputValue.toLowerCase() ||
                       item.name
                         .toLowerCase()
                         .includes(inputValue.toLowerCase()) ||
@@ -45,8 +41,8 @@ function Dropdown({ items, initialHighlightedIndex }) {
                     <li
                       className={
                         highlightedIndex === index
-                          ? 'p-4 text-lg bg-gray-200 text-dark-blue'
-                          : 'p-4 text-lg bg-white text-dark-blue'
+                          ? 'cursor-pointer p-4 text-lg bg-gray-200 text-dark-blue'
+                          : 'cursor-pointer p-4 text-lg bg-white text-dark-blue'
                       }
                       style={{
                         backgroundColor:
@@ -59,6 +55,13 @@ function Dropdown({ items, initialHighlightedIndex }) {
                         item
                       })}
                     >
+                      <span>
+                        <img
+                          className='w-6 inline-block'
+                          src={`/static/${item.flag}`}
+                          alt=''
+                        />{' '}
+                      </span>{' '}
                       {item.code && (
                         <>
                           <span className='font-normal'>{item.code}</span>{' '}

@@ -12,7 +12,13 @@ function Footer() {
       <div className='container px-6 mx-auto'>
         <div className='flex flex-col md:flex-row text-base border-b-2 border-gray-600 pb-6'>
           <div className='block md:hidden w-full text-center mb-6 md:text-left md:w-23%'>
-            <p className='font-normal text-xl tracking-tight'>TransferWise</p>
+            <a
+              href='#'
+              className='font-normal text-white text-2xl flex justify-center'
+            >
+              <img src='/static/tw.svg' className='h-5 w-5' alt='' />{' '}
+              TransferWise
+            </a>
           </div>
 
           <div className='mb-6 md:mb-0 w-full text-center md:text-left md:w-23%'>
@@ -98,7 +104,6 @@ function Footer() {
             <ul className='mt-4 flex justify-center md:justify-start'>
               <li className='mr-4'>
                 <a href='#' className='text-white text-sm hover:text-gray-400'>
-                  {/* <FaFacebook className='text-dark-blue pl-2 pr-1 text-2xl bg-white rounded-sm' /> */}
                   <FaFacebookSquare className='text-2xl' />
                 </a>
               </li>
