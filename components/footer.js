@@ -8,7 +8,7 @@ import {
 
 function Footer() {
   return (
-    <footer className='py-32 bg-dark-blue'>
+    <footer className='py-32 bg-lightest-blue'>
       <div className='container px-6 mx-auto'>
         <div className='flex flex-col md:flex-row text-base border-b-2 border-gray-600 pb-6'>
           <div className='block md:hidden w-full text-center mb-6 md:text-left md:w-23%'>

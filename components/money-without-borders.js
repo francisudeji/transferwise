@@ -1,7 +1,11 @@
+import { useState } from 'react'
+
 function MoneyWithoutBorders() {
+  const [images, setImages] = useState([{ src: '', alt: '' }])
+
   return (
     <section className='py-16 bg-white md:bg-dark-blue'>
-      <div className='container px-6 sm:px-4 lg:p-6 mx-auto'>
+      <div className='container px-6 sm:px-4 lg:p-6 mx-auto relative'>
         <div className='flex flex-col md:flex-row md:justify-between'>
           <div className='w-full md:w-48%'>
             <h2 className='text-dark-blue md:text-white text-2xl md:text-4xl font-bold mb-3 text-center md:text-left'>
@@ -37,8 +41,117 @@ function MoneyWithoutBorders() {
             </div>
           </div>
 
-          <div className='w-full mt-10 md:mt-0 md:w-48%'>
-            {/* <img src='./assets/mwb.JPG' alt='' className='w-full' /> */}
+          <div className='overflow-hidden absolute right-0 top-0 z-20 gallery w-full flex flex-wrap h-full mt-10 md:mt-0 md:w-48%'>
+            <div className='col w-20%'>
+              <img
+                className='block w-full h-32 object-cover background-cover mb-16'
+                src='/static/slide1.jpg'
+                alt=''
+              />
+              <img
+                className='block w-full h-32 object-cover background-cover mb-16'
+                src='/static/slide2.jpg'
+                alt=''
+              />
+              <img
+                className='block w-full h-32 object-cover background-cover mb-16'
+                src='/static/slide3.jpg'
+                alt=''
+              />
+              <img
+                className='block w-full h-32 object-cover background-cover mb-16'
+                src='/static/slide4.jpg'
+                alt=''
+              />
+            </div>
+            <div className='col w-20%'>
+              <img
+                className='block w-full h-32 object-cover background-cover mb-16'
+                src='/static/slide4.jpg'
+                alt=''
+              />
+              <img
+                className='block w-full h-32 object-cover background-cover mb-16'
+                src='/static/slide3.jpg'
+                alt=''
+              />
+              <img
+                className='block w-full h-32 object-cover background-cover mb-16'
+                src='/static/slide2.jpg'
+                alt=''
+              />
+              <img
+                className='block w-full h-32 object-cover background-cover mb-16'
+                src='/static/slide1.jpg'
+                alt=''
+              />
+            </div>
+            <div className='col w-20%'>
+              <img
+                className='block w-full h-32 object-cover background-cover mb-16'
+                src='/static/slide1.jpg'
+                alt=''
+              />
+              <img
+                className='block w-full h-32 object-cover background-cover mb-16'
+                src='/static/slide2.jpg'
+                alt=''
+              />
+              <img
+                className='block w-full h-32 object-cover background-cover mb-16'
+                src='/static/slide3.jpg'
+                alt=''
+              />
+              <img
+                className='block w-full h-32 object-cover background-cover mb-16'
+                src='/static/slide4.jpg'
+                alt=''
+              />
+            </div>
+            <div className='col w-20%'>
+              <img
+                className='block w-full h-32 object-cover background-cover mb-16'
+                src='/static/slide4.jpg'
+                alt=''
+              />
+              <img
+                className='block w-full h-32 object-cover background-cover mb-16'
+                src='/static/slide3.jpg'
+                alt=''
+              />
+              <img
+                className='block w-full h-32 object-cover background-cover mb-16'
+                src='/static/slide2.jpg'
+                alt=''
+              />
+              <img
+                className='block w-full h-32 object-cover background-cover mb-16'
+                src='/static/slide1.jpg'
+                alt=''
+              />
+            </div>
+            <div className='col w-20%'>
+              <img
+                className='block w-full h-32 object-cover background-cover mb-16'
+                src='/static/slide1.jpg'
+                alt=''
+              />
+              <img
+                className='block w-full h-32 object-cover background-cover mb-16'
+                src='/static/slide2.jpg'
+                alt=''
+              />
+              <img
+                className='block w-full h-32 object-cover background-cover mb-16'
+                src='/static/slide3.jpg'
+                alt=''
+              />
+              <img
+                className='block w-full h-32 object-cover background-cover mb-16'
+                src='/static/slide4.jpg'
+                alt=''
+              />
+            </div>
           </div>
         </div>
       </div>
