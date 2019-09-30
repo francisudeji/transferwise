@@ -106,6 +106,8 @@ function TrustedAllOverTheWorld() {
             <Popup
               latitude={selectedPlace.latitude}
               longitude={selectedPlace.longitude}
+              anchor="right"
+              closeButton={false}
             >
               <div>
                 <span className='block text-dark-blue semibold'>
