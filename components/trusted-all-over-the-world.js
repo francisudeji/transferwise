@@ -1,4 +1,41 @@
+import { useState, useEffect } from 'react'
+import ReactMapGL, { Marker, Popup } from 'react-map-gl'
+
 function TrustedAllOverTheWorld() {
+  const mapboxApiAccessToken =
+    'pk.eyJ1IjoiZGVzYWxlcyIsImEiOiJjamp4M2RzNDcwbWNnM2tuNm5yaHRmM2E4In0.QX356pfJaiTK27zSE1ID6w'
+  const viewport = {
+    width: '100%',
+    height: '650px',
+    latitude: 0,
+    longitude: 0,
+    zoom: 1
+  }
+
+  const [selectedPlace, setSelectedPlace] = useState(null)
+
+  const places = [
+    { name: 'India', latitude: 20.5937, longitude: 78.9629 },
+    { name: 'Europe', latitude: 54.526, longitude: 15.2551 },
+    { name: 'South Korea', latitude: 35.9078, longitude: 127.7669 },
+    { name: 'Ukraine', latitude: 48.3794, longitude: 31.1656 },
+    { name: 'United States', latitude: 37.0902, longitude: -95.7129 },
+    { name: 'Sweden', latitude: 60.1282, longitude: 18.6435 },
+    { name: 'Hungary', latitude: 47.1625, longitude: 19.5033 },
+    { name: 'United Kingdom', latitude: 55.3781, longitude: 3.436 }
+  ]
+
+  useEffect(() => {
+    const randomize = () =>
+      setInterval(
+        () =>
+          setSelectedPlace(places[Math.floor(Math.random() * places.length)]),
+        5000
+      )
+
+    randomize()
+  }, [])
+
   return (
     <section className='bg-dark-blue'>
       <div className='container mx-auto px-4 py-12'>
@@ -43,6 +80,43 @@ function TrustedAllOverTheWorld() {
             </p>
           </div>
         </div>
+        <ReactMapGL
+          {...viewport}
+          mapboxApiAccessToken={mapboxApiAccessToken}
+          mapStyle='mapbox://styles/desales/ck0tum4zx13un1co6jj5pan74'
+        >
+          {places.map(p => (
+            <Marker
+              key={p.latitude}
+              latitude={p.latitude}
+              longitude={p.longitude}
+            >
+              <button
+                onClick={e => {
+                  e.preventDefault()
+                  setSelectedPlace(p)
+                }}
+                className='h-3 w-3 bg-marker-blue rounded-full'
+                aria-labelledby='Map marker'
+              ></button>
+            </Marker>
+          ))}
+
+          {selectedPlace !== null && (
+            <Popup
+              latitude={selectedPlace.latitude}
+              longitude={selectedPlace.longitude}
+            >
+              <div>
+                <span className='block text-dark-blue semibold'>
+                  15.25 GBP to {selectedPlace.name}
+                </span>
+                <span className='block text-dark-blue'>Saved 10.34 GBP</span>
+              </div>
+            </Popup>
+          )}
+        </ReactMapGL>
+
         <div className='mt-5 border-t-2 border-dark-blue'>
           <p className='text-base text-white text-center mt-2 px-8 md:text-lg'>
             We’re available in 59 countries, and we add new currencies all the

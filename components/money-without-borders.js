@@ -1,8 +1,6 @@
-import { useState } from 'react'
+import FloatingImages from '../components/floating-images'
 
 function MoneyWithoutBorders() {
-  const [images, setImages] = useState([{ src: '', alt: '' }])
-
   return (
     <section className='py-16 bg-white md:bg-dark-blue'>
       <div className='container px-6 sm:px-4 lg:p-6 mx-auto relative'>
@@ -41,118 +39,7 @@ function MoneyWithoutBorders() {
             </div>
           </div>
 
-          <div className='overflow-hidden absolute right-0 top-0 z-20 gallery w-full flex flex-wrap h-full mt-10 md:mt-0 md:w-48%'>
-            <div className='col w-20%'>
-              <img
-                className='block w-full h-32 object-cover background-cover mb-16'
-                src='/static/slide1.jpg'
-                alt=''
-              />
-              <img
-                className='block w-full h-32 object-cover background-cover mb-16'
-                src='/static/slide2.jpg'
-                alt=''
-              />
-              <img
-                className='block w-full h-32 object-cover background-cover mb-16'
-                src='/static/slide3.jpg'
-                alt=''
-              />
-              <img
-                className='block w-full h-32 object-cover background-cover mb-16'
-                src='/static/slide4.jpg'
-                alt=''
-              />
-            </div>
-            <div className='col w-20%'>
-              <img
-                className='block w-full h-32 object-cover background-cover mb-16'
-                src='/static/slide4.jpg'
-                alt=''
-              />
-              <img
-                className='block w-full h-32 object-cover background-cover mb-16'
-                src='/static/slide3.jpg'
-                alt=''
-              />
-              <img
-                className='block w-full h-32 object-cover background-cover mb-16'
-                src='/static/slide2.jpg'
-                alt=''
-              />
-              <img
-                className='block w-full h-32 object-cover background-cover mb-16'
-                src='/static/slide1.jpg'
-                alt=''
-              />
-            </div>
-            <div className='col w-20%'>
-              <img
-                className='block w-full h-32 object-cover background-cover mb-16'
-                src='/static/slide1.jpg'
-                alt=''
-              />
-              <img
-                className='block w-full h-32 object-cover background-cover mb-16'
-                src='/static/slide2.jpg'
-                alt=''
-              />
-              <img
-                className='block w-full h-32 object-cover background-cover mb-16'
-                src='/static/slide3.jpg'
-                alt=''
-              />
-              <img
-                className='block w-full h-32 object-cover background-cover mb-16'
-                src='/static/slide4.jpg'
-                alt=''
-              />
-            </div>
-            <div className='col w-20%'>
-              <img
-                className='block w-full h-32 object-cover background-cover mb-16'
-                src='/static/slide4.jpg'
-                alt=''
-              />
-              <img
-                className='block w-full h-32 object-cover background-cover mb-16'
-                src='/static/slide3.jpg'
-                alt=''
-              />
-              <img
-                className='block w-full h-32 object-cover background-cover mb-16'
-                src='/static/slide2.jpg'
-                alt=''
-              />
-              <img
-                className='block w-full h-32 object-cover background-cover mb-16'
-                src='/static/slide1.jpg'
-                alt=''
-              />
-            </div>
-            <div className='col w-20%'>
-              <img
-                className='block w-full h-32 object-cover background-cover mb-16'
-                src='/static/slide1.jpg'
-                alt=''
-              />
-              <img
-                className='block w-full h-32 object-cover background-cover mb-16'
-                src='/static/slide2.jpg'
-                alt=''
-              />
-              <img
-                className='block w-full h-32 object-cover background-cover mb-16'
-                src='/static/slide3.jpg'
-                alt=''
-              />
-              <img
-                className='block w-full h-32 object-cover background-cover mb-16'
-                src='/static/slide4.jpg'
-                alt=''
-              />
-            </div>
-          </div>
+          <FloatingImages />
         </div>
       </div>
     </section>

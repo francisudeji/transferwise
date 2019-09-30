@@ -10,7 +10,8 @@ module.exports = {
         'dark-blue': '#2e4369',
         'tw-blue': '#5d7079',
         'dark-green': '#2ed06e',
-        'dark-red': '#C22E2E'
+        'dark-red': '#C22E2E',
+        'marker-blue': '#465AC5'
       },
       spacing: {
         '20%': '20%',

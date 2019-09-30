@@ -55,48 +55,38 @@ span {
 
 @keyframes expand {
   0% {
-    max-height: auto;
-    max-width: auto;
-    opacity: 0.7;
-    transform: scale(0%);
+    transform: scale(1);
     position: absolute;
     z-index: 50;
+    opacity: 0.6;
   }
 
   25% {
-    max-height: 100px;
-    max-width: 100px;
-    opacity: 0.8;
-    transform: scale(25%);
+    transform: scale(1.2);
     position: absolute;
     z-index: 50;
+    opacity: 0.7;
   }
 
   50% {
-    max-height: 150px;
-    max-width: 150px;
-    opacity: 0.8;
-    transform: scale(50%);
+    transform: scale(1.3);
     position: absolute;
     z-index: 50;
+    opacity: 0.8;
   }
 
   75% {
-    max-height: 200px;
-    max-width: 200px;
-    opacity: 0.9;
-    transform: scale(75%);
+    transform: scale(1.4);
     position: absolute;
     z-index: 50;
+    opacity: 0.9;
   }
 
   100% {
-    max-height: 250px;
-    max-width: 250px;
-    transform: scale(100%);
-    opacity: 1;
+    transform: scale(1.5);
     position: absolute;
     z-index: 50;
+    opacity: 1;
   }
 }
 
@@ -126,31 +116,54 @@ span {
   animation-timing-function: ease-in-out;
 }
 
-/* .gallery .col:nth-child(3) {
+.gallery .col:nth-child(3) {
   animation-name: float;
-  animation-delay: 3s;
-  animation-duration: 50s;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out;
-} */
-
-.gallery .col:nth-child(3) img:nth-child(1) {
-  animation-name: expand;
-  animation-duration: 30s;
+  animation-duration: 60s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
 }
 
+/* .gallery .col:nth-child(3) img:nth-child(1) {
+  animation-name: expand;
+  animation-delay: 40s;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+.gallery .col:nth-child(3) img:nth-child(2) {
+  animation-name: expand;
+  animation-delay: 30s;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.gallery .col:nth-child(3) img:nth-child(3) {
+  animation-name: expand;
+  animation-delay: 25s;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.gallery .col:nth-child(3) img:nth-child(4) {
+  animation-name: expand;
+  animation-delay: 10s;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+} */
+
 .gallery .col:nth-child(4) {
   animation-name: float-reverse;
-  animation-duration: 50s;
+  animation-duration: 30s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
 }
 
 .gallery .col:nth-child(5) {
   animation-name: float;
-  animation-delay: 5s;
+  animation-delay: 7s;
   animation-duration: 50s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
