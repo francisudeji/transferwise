@@ -110,7 +110,7 @@ function TrustedAllOverTheWorld() {
               closeButton={false}
             >
               <div>
-                <span className='block text-dark-blue bold'>
+                <span className='block text-dark-blue font-bold'>
                   15.25 GBP to {selectedPlace.name}
                 </span>
                 <span className='block text-dark-blue text-xs'>Saved 10.34 GBP</span>
