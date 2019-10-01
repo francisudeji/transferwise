@@ -8,7 +8,7 @@ This project was built with Next.js and tailwindcss
 - `cd` into the project folder.
 - Run `yarn install` to install dependencies.
 - Run `yarn dev` to start the development server.
-- Open your browser at http://localhost:3000
+- Open your browser at http://localhost:3000 to view the app.
 
 ## Hosting
 
