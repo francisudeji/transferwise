@@ -111,12 +111,14 @@ function TrustedAllOverTheWorld() {
             <Popup
               latitude={selectedPlace.latitude}
               longitude={selectedPlace.longitude}
+              anchor="right"
+              closeButton={false}
             >
               <div>
-                <span className='block text-dark-blue semibold'>
+                <span className='block text-dark-blue font-bold'>
                   15.25 GBP to {selectedPlace.name}
                 </span>
-                <span className='block text-dark-blue'>Saved 10.34 GBP</span>
+                <span className='block text-dark-blue text-xs'>Saved 10.34 GBP</span>
               </div>
             </Popup>
           )}
