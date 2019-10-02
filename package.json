@@ -24,8 +24,6 @@
     "react-icons": "^3.7.0",
     "react-map-gl": "^5.0.11",
     "react-slick": "^0.25.2",
-    "react-spring": "^8.0.27",
-    "resize-observer-polyfill": "^1.5.1",
     "slick-carousel": "^1.8.1",
     "tailwindcss": "^1.1.2"
   }

@@ -1,11 +1,5 @@
 import { useEffect, useState } from 'react'
-import {
-  FaChevronDown,
-  FaLine,
-  FaLock,
-  FaChevronRight,
-  FaPlay
-} from 'react-icons/fa'
+import { FaChevronDown, FaLock, FaChevronRight, FaPlay } from 'react-icons/fa'
 import axios from 'axios'
 import Dropdown from './dropdown'
 
@@ -289,7 +283,7 @@ function Main() {
                   )}
                   {isFromOpen && (
                     <div
-                      className='fixed bg-white h-120 w-full p-3 overflow-y-scroll overflow-x-hidden rounded-sm left-0 z-50 sm:absolute sm:top-0 sm:right-0 sm:left-auto sm:w-5/6'
+                      className='fixed bg-white h-50vh md:h-120 w-full p-3 overflow-y-scroll overflow-x-hidden rounded-sm left-0 z-50 sm:absolute sm:top-0 sm:right-0 sm:left-auto sm:w-5/6'
                       style={{
                         bottom: isFromOpen && '0',
                         transition: 'all 0.5s ease-in-out'
@@ -483,7 +477,7 @@ function Main() {
                   )}
                   {isToOpen && (
                     <div
-                      className='fixed bg-white h-120 w-full p-3 overflow-y-scroll overflow-x-hidden rounded-sm left-0 z-50 sm:absolute sm:top-0 sm:right-0 sm:left-auto sm:w-5/6'
+                      className='fixed bg-white h-50vh md:h-120 w-full p-3 overflow-y-scroll overflow-x-hidden rounded-sm left-0 z-50 sm:absolute sm:top-0 sm:right-0 sm:left-auto sm:w-5/6'
                       style={{
                         bottom: isToOpen && '0',
                         transition: 'all 0.5s ease-in-out'

@@ -12,7 +12,7 @@ function HowToSendMoney() {
           <div className='card bg-white w-full flex justify-between items-center rounded px-4 py-8 mb-4 sm:w-48% sm:flex-col sm:py-10 md:w-31% md:mb-6 md:py-6'>
             <img
               src='/static/register-for-free.svg'
-              alt=''
+              alt='Register for free'
               className='hidden sm:block sm:mx-auto'
             />
             <h2 className='text-dark-blue text-sm font-bold sm:text-base sm:block sm:mx-auto sm:text-center md:text-lg'>
@@ -27,7 +27,7 @@ function HowToSendMoney() {
           <div className='card bg-white w-full flex justify-between items-center rounded px-4 py-8 mb-4 sm:w-48% sm:flex-col sm:py-10 md:w-31% md:mb-6 md:py-6'>
             <img
               src='/static/choose-an-amount-to-send.svg'
-              alt=''
+              alt='Choose an amount to send'
               className='hidden sm:block sm:mx-auto'
             />
             <h2 className='text-dark-blue text-sm font-bold sm:text-base sm:block sm:mx-auto sm:text-center md:text-lg'>
@@ -42,7 +42,7 @@ function HowToSendMoney() {
           <div className='card bg-white w-full flex justify-between items-center rounded px-4 py-8 mb-4 sm:w-48% sm:flex-col sm:py-10 md:w-31% md:mb-6 md:py-6'>
             <img
               src='/static/add-recipient-bank-details.svg'
-              alt=''
+              alt={`Add recipient's bank details`}
               className='hidden sm:block sm:mx-auto'
             />
             <h2 className='text-dark-blue text-sm font-bold sm:text-base sm:block sm:mx-auto sm:text-center md:text-lg'>
@@ -57,7 +57,7 @@ function HowToSendMoney() {
           <div className='card bg-white w-full flex justify-between items-center rounded px-4 py-8 mb-4 sm:w-48% sm:flex-col sm:py-10 md:w-31% md:mb-6 md:py-6'>
             <img
               src='/static/verify-your-identity.svg'
-              alt=''
+              alt='Verify your identity'
               className='hidden sm:block sm:mx-auto'
             />
             <h2 className='text-dark-blue text-sm font-bold sm:text-base sm:mx-auto md:text-lg'>
@@ -72,7 +72,7 @@ function HowToSendMoney() {
           <div className='card bg-white w-full flex justify-between items-center rounded px-4 py-8 mb-4 sm:w-48% sm:flex-col sm:py-10 md:w-31% md:mb-6 md:py-6'>
             <img
               src='/static/pay-for-your-transfer.svg'
-              alt=''
+              alt='Pay for your transfer'
               className='hidden sm:block sm:mx-auto'
             />
             <h2 className='text-dark-blue text-sm font-bold sm:text-base sm:block sm:mx-auto sm:text-center md:text-lg'>
@@ -87,7 +87,7 @@ function HowToSendMoney() {
           <div className='card bg-white w-full flex justify-between items-center rounded px-4 py-8 mb-4 sm:w-48% sm:flex-col sm:py-10 md:w-31% md:mb-6 md:py-6'>
             <img
               src='/static/thats-it.svg'
-              alt=''
+              alt='That is it'
               className='hidden sm:block sm:mx-auto'
             />
             <h2 className='text-dark-blue text-sm font-bold sm:text-base sm:block sm:mx-auto sm:text-center md:text-lg'>

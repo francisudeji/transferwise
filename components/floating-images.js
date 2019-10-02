@@ -1,9 +1,5 @@
-import { useState, useEffect } from 'react'
 
 function FloatingImages() {
-  useEffect(() => {
-    setTimeout(() => {}, 6000)
-  })
   return (
     <div className='relative overflow-hidden gallery w-full h-112 flex flex-wrap mt-10 md:mt-0 md:w-48%'>
       <div className='col w-20%'>

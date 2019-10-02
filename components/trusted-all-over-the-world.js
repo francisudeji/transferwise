@@ -26,14 +26,19 @@ function TrustedAllOverTheWorld() {
   ]
 
   useEffect(() => {
-    const randomize = () =>
-      setInterval(
+    let interval 
+    const randomize = () => {
+
+      interval = setInterval(
         () =>
-          setSelectedPlace(places[Math.floor(Math.random() * places.length)]),
-        5000
-      )
+        setSelectedPlace(places[Math.floor(Math.random() * places.length)]),
+        7000
+        )
+    }
 
     randomize()
+
+    return () => clearInterval(interval)
   }, [])
 
   return (
